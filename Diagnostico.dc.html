@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitação de diagnóstico — Funnel Mídia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F6F4EF; color: #0E0E10; font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #836230; text-decoration: none; }
+  a:hover { color: #0E0E10; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid #B08D57; outline-offset: 2px; }
+</style>
+</helmet>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+  <div style="height: 88px; display: flex; align-items: center;">
+    <a href="Funnel Landing.dc.html" style="display: flex; align-items: center; gap: 10px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="3" width="24" height="3.5" fill="#0E0E10"></rect><rect x="0" y="10.25" width="15" height="3.5" fill="#0E0E10"></rect><rect x="0" y="17.5" width="8" height="3.5" fill="#B08D57"></rect></svg>
+      <span style="font-weight: 600; letter-spacing: -0.02em; font-size: 17px; color: #0E0E10;">FUNNEL</span>
+    </a>
+  </div>
+
+  <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width: 620px; margin: 0 auto; padding: 96px 0 160px; text-align: center;">
+      <svg width="48" height="48" viewBox="0 0 24 24" style="margin-bottom: 40px;" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="3" width="24" height="3.5" fill="#0E0E10"></rect><rect x="0" y="10.25" width="15" height="3.5" fill="#0E0E10"></rect><rect x="0" y="17.5" width="8" height="3.5" fill="#B08D57"></rect></svg>
+      <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(38px, 5vw, 56px); line-height: 1.1; margin: 0 0 24px;">Solicitação recebida.</h1>
+      <p style="font-size: 18px; line-height: 1.65; color: #6B6B70; margin: 0 0 56px;">Vamos avaliar o encaixe e responder em até um dia útil, no WhatsApp informado. Se houver encaixe, enviamos três horários para a conversa de 45 minutos.</p>
+      <div style="background: #FFFFFF; border: 1px solid #E4E0D8; border-radius: 2px; padding: 40px; text-align: left;">
+        <div style="font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: #836230; margin-bottom: 16px;">Enquanto isso</div>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0 0 20px;">Baixe o guia de conformidade em publicidade jurídica — o que o Provimento 205/2021 permite e veda, com exemplos.</p>
+        <a href="#" style="display: inline-block; border: 1px solid #0E0E10; color: #0E0E10; border-radius: 2px; padding: 12px 24px; font-size: 14px; font-weight: 500;" style-hover="background: #0E0E10; color: #F6F4EF;">Baixar o guia (PDF)</a>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ naoEnviado }}" hint-placeholder-val="{{ true }}">
+    <div style="display: grid; grid-template-columns: 5fr 1fr 6fr; gap: 24px; padding: 48px 0 160px;">
+      <div>
+        <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(38px, 4.5vw, 56px); line-height: 1.1; margin: 0 0 24px;">Solicitação de diagnóstico</h1>
+        <p style="font-size: 18px; line-height: 1.65; color: #6B6B70; margin: 0 0 48px; max-width: 46ch;">Avaliamos o encaixe antes de marcar conversa. Nem toda solicitação vira reunião — e tudo bem.</p>
+        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 56px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start;"><span style="width: 12px; height: 2px; background: #B08D57; margin-top: 10px; flex-shrink: 0;"></span><span style="font-size: 16px; line-height: 1.55;">Resposta em até 1 dia útil, no WhatsApp informado.</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start;"><span style="width: 12px; height: 2px; background: #B08D57; margin-top: 10px; flex-shrink: 0;"></span><span style="font-size: 16px; line-height: 1.55;">O diagnóstico entrega um plano de 90 dias — seu, com ou sem contrato.</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start;"><span style="width: 12px; height: 2px; background: #B08D57; margin-top: 10px; flex-shrink: 0;"></span><span style="font-size: 16px; line-height: 1.55;">Máximo de 10 bancas atendidas por vez.</span></div>
+        </div>
+        <div style="border-top: 1px solid #E4E0D8; padding-top: 32px;">
+          <div style="font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: #0E0E10; margin-bottom: 4px;">Banca tributária</div>
+          <div style="font-size: 14px; color: #6B6B70; margin-bottom: 20px;">8 advogados · SP</div>
+          <div style="font-size: 40px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; margin-bottom: 12px;">R$ 890 <span style="color: #B08D57; font-weight: 400;">→</span> <span style="color: #2E6F53;">R$ 310</span></div>
+          <p style="font-size: 14px; line-height: 1.5; color: #6B6B70; margin: 0;">Custo por reunião qualificada, em 5 meses.</p>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <div style="background: #FFFFFF; border: 1px solid #E4E0D8; border-radius: 2px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="f-nome" style="font-size: 13px; font-weight: 500;">Nome completo *</label>
+            <input id="f-nome" type="text" value="{{ vNome }}" onChange="{{ onNome }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-email" style="font-size: 13px; font-weight: 500;">E-mail *</label>
+              <input id="f-email" type="email" value="{{ vEmail }}" onChange="{{ onEmail }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%; box-sizing: border-box;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-zap" style="font-size: 13px; font-weight: 500;">WhatsApp *</label>
+              <input id="f-zap" type="tel" placeholder="(00) 00000-0000" value="{{ vZap }}" onChange="{{ onZap }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-banca" style="font-size: 13px; font-weight: 500;">Nome da banca *</label>
+              <input id="f-banca" type="text" value="{{ vBanca }}" onChange="{{ onBanca }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%; box-sizing: border-box;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-cidade" style="font-size: 13px; font-weight: 500;">Cidade / UF *</label>
+              <input id="f-cidade" type="text" value="{{ vCidade }}" onChange="{{ onCidade }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="f-site" style="font-size: 13px; font-weight: 500;">Site ou Instagram <span style="color: #6B6B70; font-weight: 400;">(opcional)</span></label>
+            <input id="f-site" type="url" value="{{ vSite }}" onChange="{{ onSite }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-advs" style="font-size: 13px; font-weight: 500;">Número de advogados *</label>
+              <select id="f-advs" value="{{ vAdvs }}" onChange="{{ onAdvs }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%;">
+                <option value="">Selecione</option>
+                <option value="1">Só eu</option>
+                <option value="2-5">2 a 5</option>
+                <option value="6-15">6 a 15</option>
+                <option value="16+">16+</option>
+              </select>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <label for="f-area" style="font-size: 13px; font-weight: 500;">Principal área de atuação *</label>
+              <select id="f-area" value="{{ vArea }}" onChange="{{ onArea }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; width: 100%;">
+                <option value="">Selecione</option>
+                <option value="Empresarial">Empresarial</option>
+                <option value="Tributário">Tributário</option>
+                <option value="Trabalhista">Trabalhista</option>
+                <option value="Família e Sucessões">Família e Sucessões</option>
+                <option value="Imobiliário">Imobiliário</option>
+                <option value="Previdenciário">Previdenciário</option>
+                <option value="Criminal">Criminal</option>
+                <option value="Consumidor">Consumidor</option>
+                <option value="Outra">Outra</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="f-hono" style="font-size: 13px; font-weight: 500;">Honorário médio por contrato *</label>
+            <select id="f-hono" value="{{ vHono }}" onChange="{{ onHono }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10;">
+              <option value="">Selecione</option>
+              <option value="ate-3">Até R$ 3 mil</option>
+              <option value="3-10">R$ 3 a 10 mil</option>
+              <option value="10-30">R$ 10 a 30 mil</option>
+              <option value="30+">Acima de R$ 30 mil</option>
+              <option value="nd">Prefiro não informar</option>
+            </select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-size: 13px; font-weight: 500;">Investe em mídia paga hoje? *</span>
+            <sc-for list="{{ midiaOpcoes }}" as="op" hint-placeholder-count="4">
+              <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
+                <input type="radio" name="midia" value="{{ op.valor }}" checked="{{ op.marcado }}" onChange="{{ op.marcar }}" style="accent-color: #0E0E10; width: 16px; height: 16px; margin: 0;">
+                {{ op.rotulo }}
+              </label>
+            </sc-for>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="f-gargalo" style="font-size: 13px; font-weight: 500;">Qual é o gargalo, na sua leitura? *</label>
+            <textarea id="f-gargalo" rows="4" placeholder="Ex.: chegam contatos, mas quase nenhum fecha." value="{{ vGargalo }}" onChange="{{ onGargalo }}" style="border: 1px solid #E4E0D8; border-radius: 2px; padding: 12px 14px; font-size: 15px; font-family: Inter, sans-serif; background: #FFFFFF; color: #0E0E10; resize: vertical;"></textarea>
+            <span style="font-size: 12px; color: #6B6B70;">Mínimo de 30 caracteres.</span>
+          </div>
+          <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 13px; line-height: 1.5; color: #6B6B70; cursor: pointer;">
+            <input type="checkbox" checked="{{ vLgpd }}" onChange="{{ onLgpd }}" style="accent-color: #0E0E10; width: 16px; height: 16px; margin: 2px 0 0; flex-shrink: 0;">
+            Autorizo a Funnel Mídia a tratar os dados acima para avaliação de encaixe e contato comercial, nos termos da Política de Privacidade. Posso solicitar exclusão a qualquer momento.
+          </label>
+          <sc-if value="{{ temErro }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size: 14px; color: #8a3b2e; margin: 0;">{{ erro }}</p>
+          </sc-if>
+          <button onClick="{{ enviar }}" style="background: #0E0E10; color: #F6F4EF; border: none; border-radius: 2px; padding: 16px 24px; font-size: 15px; font-weight: 500; font-family: Inter, sans-serif; cursor: pointer; width: 100%;" style-hover="background: #2a2a2e;">Enviar solicitação</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { enviado: false, erro: '', nome: '', email: '', zap: '', banca: '', cidade: '', site: '', advs: '', area: '', hono: '', midia: '', gargalo: '', lgpd: false };
+  set(k) { return (e) => this.setState({ [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value, erro: '' }); }
+  renderVals() {
+    const s = this.state;
+    const midiaRotulos = [["nao", "Não"], ["ate-3k", "Sim, até R$ 3 mil/mês"], ["3-10k", "Sim, R$ 3 a 10 mil/mês"], ["10k+", "Sim, acima de R$ 10 mil/mês"]];
+    return {
+      enviado: s.enviado, naoEnviado: !s.enviado,
+      vNome: s.nome, onNome: this.set('nome'),
+      vEmail: s.email, onEmail: this.set('email'),
+      vZap: s.zap, onZap: this.set('zap'),
+      vBanca: s.banca, onBanca: this.set('banca'),
+      vCidade: s.cidade, onCidade: this.set('cidade'),
+      vSite: s.site, onSite: this.set('site'),
+      vAdvs: s.advs, onAdvs: this.set('advs'),
+      vArea: s.area, onArea: this.set('area'),
+      vHono: s.hono, onHono: this.set('hono'),
+      vGargalo: s.gargalo, onGargalo: this.set('gargalo'),
+      vLgpd: s.lgpd, onLgpd: this.set('lgpd'),
+      midiaOpcoes: midiaRotulos.map(([valor, rotulo]) => ({
+        valor, rotulo, marcado: s.midia === valor,
+        marcar: () => this.setState({ midia: valor, erro: '' })
+      })),
+      temErro: !!s.erro, erro: s.erro,
+      enviar: () => {
+        if (!s.nome || !s.banca || !s.cidade || !s.advs || !s.area || !s.hono || !s.midia) return this.setState({ erro: 'Preencha todos os campos obrigatórios.' });
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s.email)) return this.setState({ erro: 'Informe um e-mail válido.' });
+        if (s.zap.replace(/\D/g, '').length < 10) return this.setState({ erro: 'Informe um WhatsApp válido, com DDD.' });
+        if (s.gargalo.trim().length < 30) return this.setState({ erro: 'Descreva o gargalo com pelo menos 30 caracteres.' });
+        if (!s.lgpd) return this.setState({ erro: 'É necessário autorizar o tratamento dos dados.' });
+        this.setState({ enviado: true });
+        window.scrollTo(0, 0);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
